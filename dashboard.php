@@ -1,10 +1,13 @@
 <?php
 session_start();
+print_r($_SESSION);
 if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true) {
     header("Location: login.php");
     exit;
 }
+
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : "User";
+
 ?>
 
 <!DOCTYPE html>
